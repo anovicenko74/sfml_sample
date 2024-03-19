@@ -1,7 +1,8 @@
 #pragma once
 #include <string>
 #include <iostream>
-
+#include <Rectangle.hpp>
+#include <Triangle.hpp>
 namespace mt 
 {
 	class Game 
@@ -10,6 +11,8 @@ namespace mt
 		int m_height;
 		std::string m_capture;
 		mt::Circle* m_c;
+		mt::Rectangle* m_r;
+		mt::Triangle* m_t;
 		int m_n;
 		sf::RenderWindow m_window;
 
@@ -26,31 +29,21 @@ namespace mt
 		void setup(int n) {
 			m_n = n;
 
-			// Создание окна
+			// Create Window
 			m_window.create(sf::VideoMode(m_width, m_height), m_capture);
 
 			srand(time(0));
 
 
 			m_c = new mt::Circle[m_n];
-
+			m_r = new mt::Rectangle[m_n];
+			//m_t = new mt::Triangle[m_n];
+				
+			// Create Shapes...
 			for (int i = 0; i < n; i++) {
-				int x = rand() % 1000;
-				int y = rand() % 100;
-				int r = rand() & 100 + 1;
-				int vx = rand() % 80 + 1;
-				int vy = rand() % 80 + 1;
-
-				if (x < 0 || x + 2 * r > m_width)
-					x = r;
-				if (y < 0 || y + 2 * r > m_height)
-					y = r;
-
-				m_c[i].setup(x, y, r, vx, vy);
-				m_c[i].setBoard(m_height, m_width);
+				m_c[i].randomSetup(m_width, m_height);
+				m_r[i].randomSetup(m_width, m_height);
 			}
-
-			
 		}
 
 		void lifeCycle() {
@@ -65,32 +58,26 @@ namespace mt
 						m_window.close();
 				}
 
-				// Логика
 				float dt = clock.getElapsedTime().asSeconds();
 				clock.restart();
 
-				// Перемещение шарика
+				// Move
 				for (int i = 0; i < m_n; i++) {
 					m_c[i].move(dt);
+					m_r[i].move(dt);
 				}
 
+				// Border touch logic
 				for (int i = 0; i < m_n; i++) {
-					std::cout << m_c[i].touchBoard();
-					if (m_c[i].touchHorizontal()) {
-						m_c[i].setVx(-m_c[i].getVx());
-					} 
-
-					if (m_c[i].touchVertical()) {
-						m_c[i].setVy(-m_c[i].getVy());
-					}
+					m_c[i].checkTouchBoard();
+					m_r[i].checkTouchBoard();
 				}
-
-
 
 				// Отображение
 				m_window.clear();
 				for (int i = 0; i < m_n; i++) {
 					m_window.draw(m_c[i].get());
+				    m_window.draw(m_r[i].get());
 				}
 
 				m_window.display();

@@ -1,13 +1,15 @@
 ﻿#include <SFML/Graphics.hpp>
 #include <Circle.hpp>
 #include <Game.hpp>
-
+#include <cstdlib>  
 
 int main()
 {
-    mt::Game game(1200, 1000, "GAME!!!");
+    std::system("chcp 1251");
 
-    game.setup(5);
+    mt::Game game(600, 600, "GAME!!!");
+
+    game.setup(2);
     game.lifeCycle();
 
     return 0;
