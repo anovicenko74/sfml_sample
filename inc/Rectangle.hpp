@@ -8,10 +8,7 @@ namespace mt
 {
 	class Rectangle : public mt::Shape
 	{
-		float m_w, m_h;
 		sf::RectangleShape shape;
-		float default_vx = 4000, default_vy = 4000;
-
 
 	public:
 		Rectangle() = default;
@@ -22,7 +19,6 @@ namespace mt
 		}
 
 		void touchEffect() {
-			std::cout << "Rectangle touch";
 			setColor();
 		}
 
@@ -30,10 +26,12 @@ namespace mt
 		{	
 			m_w = w;
 			m_h = h;
-			m_x = x;
-			m_y = y;
+			setX(x);
+			setY(y);
 			setVx(vx);
 			setVy(vy);
+
+			checkTouchBoard();
 
 			shape.setSize(sf::Vector2f(m_w, m_h));
 			shape.setPosition(m_x, m_y);
@@ -46,10 +44,11 @@ namespace mt
 			int h = rand() % 100 + 100;
 			int x = rand() % (board_w - w - 1) + w + 1;
 			int y = rand() % (board_h - h - 1) + h + 1;
-			int vx = rand() % 200 + 100;
-			int vy = rand() % 200 + 100;
+			int vx = rand() % 2000 + 100;
+			int vy = rand() % 2000 + 100;
 
 			setBoard(board_w, board_h);
+
 			setup(x, y, w, h, vx, vy);
 			setColor();
 		}
@@ -67,11 +66,11 @@ namespace mt
 		{
 			return shape;
 		}
-		
+
 		void move(float dt)
-		{
-			m_x += m_vx * dt;
-			m_y += m_vy * dt;
+		{	
+			setX(m_x + m_vx * dt);
+			setY(m_y + m_vy * dt);
 
 			shape.setPosition(m_x, m_y);
 		}

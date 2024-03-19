@@ -6,9 +6,9 @@ namespace mt
 	class Shape
 	{
 	public:
-		float m_x, m_y;
+		float m_x = 0, m_y = 0;
 		float m_vx, m_vy;
-		float default_vx = 4000, default_vy = 4000;
+		float m_w, m_h;
 		bool m_touching = false;
 		// хочу иметь абстрактный sf::Shape (€ хз как)
 		// и чтобы унаследованные методы обращались к переопределенному полю shape в дочерних классах
@@ -24,40 +24,54 @@ namespace mt
 
 		virtual void randomSetup(int board_w, int board_h) {}
 		virtual void move(float dt) {}
-		virtual bool isHorizontalTouch() = 0 {}
-		virtual bool isVerticalTouch() = 0 {}
+
 		bool checkTouchBoard() 
 		{	
 			if (!board_h || !board_w) return false;
 
-			bool frame_touch = false;
 
 			if (isHorizontalTouch())
 			{
-				frame_touch = true;
+				setVx(-getVx());
 
-				if (!m_touching)
-				{
-					setVx(-getVx());
+				if (m_x <= 0) 
+				{	
+					setX(1);
+					move(0);
 				}
+				else 
+				{	
+					setX(board_w - m_w - 1);
+					move(0);
+				}
+
+				touchEffect();
+
+				return true;
 			}
 
 			if (isVerticalTouch())
 			{	
-				frame_touch = true;
+				std::cout << "vertical" << std::endl;
+				setVy(-getVy());
 
-				if (!m_touching)
+				if (m_y <= 0)
 				{
-					setVy(-getVy());
+					setY(1);
+					move(0);
 				}
+				else
+				{
+					setY(board_h - m_h - 1);
+					move(0);
+				}
+
+				touchEffect();
+
+				return true;
 			}
 
-			if (frame_touch && !m_touching)
-			{ 
-				touchEffect();
-				m_touching = true;
-			};
-			if (!frame_touch) m_touching = false;
+			return false;
 		}
 
 		virtual void touchEffect() {};
@@ -72,19 +86,21 @@ namespace mt
 		}
 
 		void setVx(float vx) {
-			if (vx > default_vx || vx < -default_vx) {
-				std::cout << "Ѕрат, куда гонишь по горизонтали? —бавим до " << default_vx << std::endl;
-				m_vx = default_vx;
-			}
-			else m_vx = vx;
+			 m_vx = vx;
 		}
 
 		void setVy(float vy) {
-			if (vy > default_vy || vy < -default_vy) {
-				std::cout << "Ѕрат, куда гонишь по вертикали? —бавим до " << default_vy << std::endl;
-				m_vy = default_vy;
-			} 
-			else m_vy = vy;
+			 m_vy = vy;
+		}
+
+		void setX(int x)
+		{
+			m_x = x;
+		}
+
+		void setY(int y)
+		{	
+			m_y = y;
 		}
 
 		float getVx() {
@@ -98,6 +114,16 @@ namespace mt
 		void setBoard(float w, float h) {
 			board_w = w;
 			board_h = h;
+		}
+
+		bool isHorizontalTouch()
+		{	
+			return (m_x + m_w >= board_w || m_x <= 0);
+		}
+
+		bool isVerticalTouch()
+		{
+			return (m_y + m_h >= board_h || m_y <= 0);
 		}
 	};
 }

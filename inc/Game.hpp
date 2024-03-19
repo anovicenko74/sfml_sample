@@ -31,18 +31,20 @@ namespace mt
 
 			// Create Window
 			m_window.create(sf::VideoMode(m_width, m_height), m_capture);
+			m_window.setFramerateLimit(60);
 
 			srand(time(0));
 
 
 			m_c = new mt::Circle[m_n];
 			m_r = new mt::Rectangle[m_n];
-			//m_t = new mt::Triangle[m_n];
+			m_t = new mt::Triangle[m_n];
 				
 			// Create Shapes...
 			for (int i = 0; i < n; i++) {
 				m_c[i].randomSetup(m_width, m_height);
 				m_r[i].randomSetup(m_width, m_height);
+				m_t[i].randomSetup(m_width, m_height);
 			}
 		}
 
@@ -65,19 +67,22 @@ namespace mt
 				for (int i = 0; i < m_n; i++) {
 					m_c[i].move(dt);
 					m_r[i].move(dt);
+					m_t[i].move(dt);
 				}
 
 				// Border touch logic
 				for (int i = 0; i < m_n; i++) {
 					m_c[i].checkTouchBoard();
 					m_r[i].checkTouchBoard();
+					m_t[i].checkTouchBoard();
 				}
 
-				// Отображение
+				// View
 				m_window.clear();
 				for (int i = 0; i < m_n; i++) {
 					m_window.draw(m_c[i].get());
 				    m_window.draw(m_r[i].get());
+					m_window.draw(m_t[i].get());
 				}
 
 				m_window.display();
