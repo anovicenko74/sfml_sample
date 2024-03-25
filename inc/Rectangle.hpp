@@ -44,8 +44,8 @@ namespace mt
 			int h = rand() % 100 + 100;
 			int x = rand() % (board_w - w - 1) + w + 1;
 			int y = rand() % (board_h - h - 1) + h + 1;
-			int vx = rand() % 2000 + 100;
-			int vy = rand() % 2000 + 100;
+			int vx = rand() % 200000000000 + 100;
+			int vy = rand() % 200000000000 + 100;
 
 			setBoard(board_w, board_h);
 

@@ -1,5 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include <string>
 
 namespace mt
 {
@@ -33,17 +34,9 @@ namespace mt
 			if (isHorizontalTouch())
 			{
 				setVx(-getVx());
-
-				if (m_x <= 0) 
-				{	
-					setX(1);
-					move(0);
-				}
-				else 
-				{	
-					setX(board_w - m_w - 1);
-					move(0);
-				}
+				float newX = std::max(0.0f, std::min(board_w - m_w, m_x));
+				setX(newX);
+				move(0);
 
 				touchEffect();
 
@@ -55,16 +48,9 @@ namespace mt
 				std::cout << "vertical" << std::endl;
 				setVy(-getVy());
 
-				if (m_y <= 0)
-				{
-					setY(1);
-					move(0);
-				}
-				else
-				{
-					setY(board_h - m_h - 1);
-					move(0);
-				}
+				float newY = std::max(0.0f, std::min(board_h - m_h, m_y));
+				setY(newY);
+				move(0);
 
 				touchEffect();
 

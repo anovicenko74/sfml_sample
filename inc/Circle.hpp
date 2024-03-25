@@ -46,8 +46,8 @@ namespace mt
 			int r = rand() % 100 + 20;
 			int x = rand() % (board_w - r - 1) + r + 1;
 			int y = rand() % (board_h - r - 1) + r + 1;
-			int vx = rand() % 10000 + 200;
-			int vy = rand() % 10000 + 200;
+			int vx = rand() % 100000000 + 200;
+			int vy = rand() % 100000000 + 200;
 
 			setBoard(board_w, board_h);
 			setup(x, y, r, vx, vy);
@@ -70,18 +70,11 @@ namespace mt
 
 		void move(float dt)
 		{	
-			if (stop_counter)
-			{
-				stop_counter--;
-				setColor();
-			}
-			else 
-			{	
+		
 				setX(m_x + m_vx * dt);
 				setY(m_y + m_vy * dt);
 				
 				shape.setPosition(m_x, m_y);
-			}
 		}
 	};
 }

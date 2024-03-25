@@ -45,8 +45,8 @@ namespace mt
 			int size = rand() % (180 - 60 + 1) + 60; // размер от 60 до 180
 			int x = rand() % (board_w - size - 1) + size + 1;
 			int y = rand() % (board_h - size - 1) + size + 1;
-			int vx = rand() % 700 + 100;
-			int vy = rand() % 700 + 100;
+			int vx = rand() % 100 + 100;
+			int vy = rand() % 100 + 100;
 			
 
 			setup(x, y, size, vx, vy);

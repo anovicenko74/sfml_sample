@@ -9,7 +9,7 @@ int main()
 
     mt::Game game(600, 600, "GAME!!!");
 
-    game.setup(3);
+    game.setup(1);
     game.lifeCycle();
 
     return 0;
