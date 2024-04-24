@@ -17,19 +17,4 @@ include_directories("ext/SFML/include/")	# добавляем директори
 include_directories("inc/")
 link_directories("ext/SFML/lib/")	
 
-add_executable("${PROJECT_NAME}" main.cpp src/game.cpp src/circle.cpp src/rectangle.cpp src/triangle.cpp src/shape.cpp inc/game.hpp inc/circle.hpp inc/rectangle.hpp inc/triangle.hpp inc/shape.hpp)
-											
-target_link_libraries("${PROJECT_NAME}" sfml-graphics-s-d
-						  sfml-window-s-d
-						  sfml-system-s-d
-						  opengl32
-						  freetype
-						  winmm
-						  gdi32
-						  sfml-audio-s-d
-						  openal32
-						  flac
-						  vorbisenc
-						  vorbisfile
-						  vorbis
-						  ogg)
+add_executable("${PROJECT_NAME}" main.cpp  inc/complex.hpp src/complex.cpp)
