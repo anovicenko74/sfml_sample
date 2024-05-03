@@ -1,4 +1,4 @@
-# Install script for directory: B:/labs/sfml_sample/lab5
+# Install script for directory: B:/labs/main_repo/lab6
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "B:/labs/sfml_sample/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "B:/labs/main_repo/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

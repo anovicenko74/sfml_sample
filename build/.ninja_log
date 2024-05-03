@@ -1,4 +1,7 @@
 # ninja log v5
-11	915	7364732680872433	CMakeFiles/sfml_sample.dir/src/complex.cpp.obj	63e1940e67269983
-8	1563	7364732687348358	CMakeFiles/sfml_sample.dir/main.cpp.obj	120802c855151fa1
-1563	1704	7364732688673458	sfml_sample.exe	aa4d6f762fee3063
+14	153	7364781147462593	CMakeFiles/sfml_sample.dir/src/point.cpp.obj	783138c145e59c68
+12	76	7364749702413156	CMakeFiles/sfml_sample.dir/src/circle.cpp.obj	a036adbad47d1af1
+15	81	7364749702433241	CMakeFiles/sfml_sample.dir/src/rectangle.cpp.obj	2f7aeee7e35c3be3
+34	151	7364781147432590	CMakeFiles/sfml_sample.dir/src/figure.cpp.obj	7be3073da12c1032
+2	410	7364749705773864	CMakeFiles/sfml_sample.dir/main.cpp.obj	3deb257ad0172031
+153	245	7364781148322464	sfml_sample.exe	51f04f9290e9b7ec
