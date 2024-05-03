@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 namespace mt
 {
@@ -19,6 +20,13 @@ namespace mt
         {
             this->x = c.x;
             this->y = c.y;
+        }
+
+        Complex &operator=(Complex &complex)
+        {
+            Complex newComplex(complex.getX(), complex.getY());
+
+            return newComplex;
         }
 
         Complex operator+(const Complex complex) const
@@ -96,7 +104,46 @@ namespace mt
 
         ~Complex()
         {
-            std::cout << "Delete that object: " << x << " " << y << std::endl;
+            // std::cout << "Delete that object: " << x << " " << y << std::endl;
+        }
+
+        static float scalar(Complex &a, Complex &b)
+        {
+            Complex temp = a * b;
+
+            return temp.getX();
+        }
+
+        static float abs(Complex &a, Complex &b)
+        {
+            float a_abs = sqrtf((a.getX(), 2) + powf(a.getY(), 2));
+            float b_abs = sqrtf(powf(b.getX(), 2) + powf(b.getY(), 2));
+
+            return a_abs > b_abs ? a_abs : b_abs;
+        }
+
+        static int q(Complex &a)
+        {
+            float x = a.getX();
+            float y = a.getY();
+
+            if (x == 0 || y == 0)
+                return 0;
+
+            if (x > 0)
+            {
+                if (y > 0)
+                    return 1;
+                if (y < 0)
+                    return 4;
+            }
+            else if (x < 0)
+            {
+                if (y > 0)
+                    return 2;
+                if (y < 0)
+                    return 3;
+            }
         }
     };
 };

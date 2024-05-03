@@ -1,0 +1,14 @@
+[
+{
+  "directory": "B:/labs/sfml_sample/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -DSFML_STATIC -IB:/labs/sfml_sample/ext/SFML/include -IB:/labs/sfml_sample/inc -g -std=c++17 -o CMakeFiles\\sfml_sample.dir\\main.cpp.obj -c B:\\labs\\sfml_sample\\main.cpp",
+  "file": "B:\\labs\\sfml_sample\\main.cpp",
+  "output": "CMakeFiles\\sfml_sample.dir\\main.cpp.obj"
+},
+{
+  "directory": "B:/labs/sfml_sample/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -DSFML_STATIC -IB:/labs/sfml_sample/ext/SFML/include -IB:/labs/sfml_sample/inc -g -std=c++17 -o CMakeFiles\\sfml_sample.dir\\src\\complex.cpp.obj -c B:\\labs\\sfml_sample\\src\\complex.cpp",
+  "file": "B:\\labs\\sfml_sample\\src\\complex.cpp",
+  "output": "CMakeFiles\\sfml_sample.dir\\src\\complex.cpp.obj"
+}
+]
