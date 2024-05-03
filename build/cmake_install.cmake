@@ -1,4 +1,4 @@
-# Install script for directory: B:/labs/sfml_sample
+# Install script for directory: B:/labs/sfml_sample/lab5
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -79,11 +79,11 @@
 			[
 				{
 					"backtrace" : 4,
-					"path" : "B:/labs/sfml_sample/ext/SFML/include"
+					"path" : "B:/labs/sfml_sample/lab5/ext/SFML/include"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "B:/labs/sfml_sample/inc"
+					"path" : "B:/labs/sfml_sample/lab5/inc"
 				}
 			],
 			"language" : "CXX",
@@ -117,7 +117,7 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "-LB:\\labs\\sfml_sample\\ext\\SFML\\lib",
+				"fragment" : "-LB:\\labs\\sfml_sample\\lab5\\ext\\SFML\\lib",
 				"role" : "libraryPath"
 			},
 			{

@@ -1,24 +1,4 @@
 # ninja log v5
-10	221	7364679241349171	CMakeFiles/sfml_sample.dir/src/complex.cpp.obj	daddb8ef5b94487b
-1	720	7364675647966547	CMakeFiles/sfml_sample.dir/main.cpp.obj	847e9296f707553c
-721	795	7364675648670536	sfml_sample.exe	93d9bfd70fe60618
-10	220	7364679394949375	CMakeFiles/sfml_sample.dir/src/complex.cpp.obj	daddb8ef5b94487b
-13	103	7364680030512956	sfml_sample.exe	93d9bfd70fe60618
-3	385	7364682842053740	CMakeFiles/sfml_sample.dir/main.cpp.obj	847e9296f707553c
-385	468	7364682842842997	sfml_sample.exe	93d9bfd70fe60618
-13	379	7364683259959683	CMakeFiles/sfml_sample.dir/main.cpp.obj	847e9296f707553c
-379	454	7364683260683368	sfml_sample.exe	93d9bfd70fe60618
-13	433	7364689225929365	CMakeFiles/sfml_sample.dir/main.cpp.obj	847e9296f707553c
-12	94	7364689298662549	sfml_sample.exe	93d9bfd70fe60618
-8	436	7364698269968733	CMakeFiles/sfml_sample.dir/main.cpp.obj	847e9296f707553c
-436	518	7364698270702744	sfml_sample.exe	93d9bfd70fe60618
-13	445	7364698382787943	CMakeFiles/sfml_sample.dir/main.cpp.obj	847e9296f707553c
-445	520	7364698383502751	sfml_sample.exe	93d9bfd70fe60618
-11	460	7364698446133516	CMakeFiles/sfml_sample.dir/main.cpp.obj	847e9296f707553c
-460	537	7364698446872607	sfml_sample.exe	93d9bfd70fe60618
-13	434	7364698539813244	CMakeFiles/sfml_sample.dir/main.cpp.obj	847e9296f707553c
-434	507	7364698540517133	sfml_sample.exe	93d9bfd70fe60618
-13	440	7364702052503859	CMakeFiles/sfml_sample.dir/main.cpp.obj	847e9296f707553c
-440	526	7364702053322173	sfml_sample.exe	93d9bfd70fe60618
-15	409	7364702284165976	CMakeFiles/sfml_sample.dir/main.cpp.obj	847e9296f707553c
-11	97	7364702355323368	sfml_sample.exe	93d9bfd70fe60618
+11	915	7364732680872433	CMakeFiles/sfml_sample.dir/src/complex.cpp.obj	63e1940e67269983
+8	1563	7364732687348358	CMakeFiles/sfml_sample.dir/main.cpp.obj	120802c855151fa1
+1563	1704	7364732688673458	sfml_sample.exe	aa4d6f762fee3063
