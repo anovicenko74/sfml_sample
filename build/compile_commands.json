@@ -28,5 +28,11 @@
   "command": "C:\\msys64\\mingw64\\bin\\g++.exe -DSFML_STATIC -IB:/labs/main_repo/lab6/ext/SFML/include -IB:/labs/main_repo/lab6/inc -g -std=c++17 -o CMakeFiles\\sfml_sample.dir\\src\\rectangle.cpp.obj -c B:\\labs\\main_repo\\lab6\\src\\rectangle.cpp",
   "file": "B:\\labs\\main_repo\\lab6\\src\\rectangle.cpp",
   "output": "CMakeFiles\\sfml_sample.dir\\src\\rectangle.cpp.obj"
+},
+{
+  "directory": "B:/labs/main_repo/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -DSFML_STATIC -IB:/labs/main_repo/lab6/ext/SFML/include -IB:/labs/main_repo/lab6/inc -g -std=c++17 -o CMakeFiles\\sfml_sample.dir\\src\\util.cpp.obj -c B:\\labs\\main_repo\\lab6\\src\\util.cpp",
+  "file": "B:\\labs\\main_repo\\lab6\\src\\util.cpp",
+  "output": "CMakeFiles\\sfml_sample.dir\\src\\util.cpp.obj"
 }
 ]

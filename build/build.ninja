@@ -89,6 +89,14 @@ build CMakeFiles/sfml_sample.dir/src/rectangle.cpp.obj: CXX_COMPILER__sfml_sampl
   OBJECT_DIR = CMakeFiles\sfml_sample.dir
   OBJECT_FILE_DIR = CMakeFiles\sfml_sample.dir\src
 
+build CMakeFiles/sfml_sample.dir/src/util.cpp.obj: CXX_COMPILER__sfml_sample_unscanned_Debug B$:/labs/main_repo/lab6/src/util.cpp || cmake_object_order_depends_target_sfml_sample
+  DEFINES = -DSFML_STATIC
+  DEP_FILE = CMakeFiles\sfml_sample.dir\src\util.cpp.obj.d
+  FLAGS = -g -std=c++17
+  INCLUDES = -IB:/labs/main_repo/lab6/ext/SFML/include -IB:/labs/main_repo/lab6/inc
+  OBJECT_DIR = CMakeFiles\sfml_sample.dir
+  OBJECT_FILE_DIR = CMakeFiles\sfml_sample.dir\src
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target sfml_sample
@@ -97,7 +105,7 @@ build CMakeFiles/sfml_sample.dir/src/rectangle.cpp.obj: CXX_COMPILER__sfml_sampl
 #############################################
 # Link the executable sfml_sample.exe
 
-build sfml_sample.exe: CXX_EXECUTABLE_LINKER__sfml_sample_Debug CMakeFiles/sfml_sample.dir/main.cpp.obj CMakeFiles/sfml_sample.dir/src/point.cpp.obj CMakeFiles/sfml_sample.dir/src/figure.cpp.obj CMakeFiles/sfml_sample.dir/src/circle.cpp.obj CMakeFiles/sfml_sample.dir/src/rectangle.cpp.obj
+build sfml_sample.exe: CXX_EXECUTABLE_LINKER__sfml_sample_Debug CMakeFiles/sfml_sample.dir/main.cpp.obj CMakeFiles/sfml_sample.dir/src/point.cpp.obj CMakeFiles/sfml_sample.dir/src/figure.cpp.obj CMakeFiles/sfml_sample.dir/src/circle.cpp.obj CMakeFiles/sfml_sample.dir/src/rectangle.cpp.obj CMakeFiles/sfml_sample.dir/src/util.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   LINK_PATH = -LB:/labs/main_repo/lab6/ext/SFML/lib

@@ -1,28 +1,27 @@
 #include "figure.hpp"
 #include <iostream>
+#define _USE_MATH_DEFINES
+#include <math.h>
+
 namespace mt
 {
     class Circle : public Figure
     {
     private:
-        std::vector<mt::Point> points;
-        float r = 0;
+        float radius;
+        mt::Point o;
 
     public:
-        Circle(std::vector<mt::Point> points, float r, char c) : Figure(points)
-        {
-            this->r = r;
-        };
+        Circle() : mt::Figure("none"), o(mt::Point(0, 0)), radius(1) {}
+        Circle(const mt::Point &o, const float radius, const std::string color) : mt::Figure(color), o(o), radius(radius) {}
 
         float getSquare() const override
         {
-            // std::cout << this->points;
-            return 5;
+            return M_PI * std::pow(radius, 2);
         }
 
-        ~Circle()
-        {
-            points.clear();
+        ~Circle(){
+
         };
     };
 }

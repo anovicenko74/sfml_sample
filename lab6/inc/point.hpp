@@ -8,6 +8,10 @@ namespace mt
 
     public:
         Point(float x, float y) : x(x), y(y){};
+
+        float getX() { return x; };
+        float getY() { return y; };
+
         ~Point();
     };
 

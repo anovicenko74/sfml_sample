@@ -5,21 +5,17 @@ namespace mt
 {
     class Figure
     {
-    private:
-        std::vector<mt::Point> points;
+    protected:
+        std::string color;
 
     public:
-        Figure(std::vector<mt::Point> points)
+        Figure(std::string color)
         {
-            for (int i = 0; i < points.size(); i++)
-                this->points.push_back(points[i]);
+            this->color = color;
         };
 
         virtual float getSquare() const = 0;
 
-        ~Figure()
-        {
-            points.clear();
-        };
+        ~Figure(){};
     };
 }
