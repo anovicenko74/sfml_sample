@@ -1,7 +1,12 @@
 # ninja log v5
-14	153	7364781147462593	CMakeFiles/sfml_sample.dir/src/point.cpp.obj	783138c145e59c68
-12	76	7364749702413156	CMakeFiles/sfml_sample.dir/src/circle.cpp.obj	a036adbad47d1af1
-15	81	7364749702433241	CMakeFiles/sfml_sample.dir/src/rectangle.cpp.obj	2f7aeee7e35c3be3
-34	151	7364781147432590	CMakeFiles/sfml_sample.dir/src/figure.cpp.obj	7be3073da12c1032
-2	410	7364749705773864	CMakeFiles/sfml_sample.dir/main.cpp.obj	3deb257ad0172031
-153	245	7364781148322464	sfml_sample.exe	51f04f9290e9b7ec
+4	51	7368814662291430	CMakeFiles/sfml_sample.dir/src/point.cpp.obj	783138c145e59c68
+7	54	7368814662321437	CMakeFiles/sfml_sample.dir/src/figure.cpp.obj	7be3073da12c1032
+10	59	7368814662371441	CMakeFiles/sfml_sample.dir/src/circle.cpp.obj	a036adbad47d1af1
+13	61	7368814662391427	CMakeFiles/sfml_sample.dir/src/rectangle.cpp.obj	2f7aeee7e35c3be3
+16	63	7368814662411461	CMakeFiles/sfml_sample.dir/src/utils.cpp.obj	cbdcd2ca05cbbb8
+2	484	7368814666616481	CMakeFiles/sfml_sample.dir/main.cpp.obj	3deb257ad0172031
+485	575	7368814667456704	sfml_sample.exe	2c2b7a521300011f
+14	501	7368822699930472	CMakeFiles/sfml_sample.dir/main.cpp.obj	3deb257ad0172031
+501	592	7368822700802946	sfml_sample.exe	2c2b7a521300011f
+13	561	7368823833032182	CMakeFiles/sfml_sample.dir/main.cpp.obj	3deb257ad0172031
+562	652	7368823833901861	sfml_sample.exe	2c2b7a521300011f

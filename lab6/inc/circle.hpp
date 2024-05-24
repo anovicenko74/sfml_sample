@@ -2,6 +2,7 @@
 #include <iostream>
 #define _USE_MATH_DEFINES
 #include <math.h>
+#pragma once
 
 namespace mt
 {
@@ -14,6 +15,19 @@ namespace mt
     public:
         Circle() : mt::Figure("none"), o(mt::Point(0, 0)), radius(1) {}
         Circle(const mt::Point &o, const float radius, const std::string color) : mt::Figure(color), o(o), radius(radius) {}
+
+        std::string getName() const override
+        {
+            return "Circle";
+        }
+
+        std::vector<mt::Point> getPoints() const override
+        {
+            // for (const Point &point : figure.getPoints())
+            //     std::cout << point << " ";
+            std::vector<mt::Point> result{o};
+            return result;
+        }
 
         float getSquare() const override
         {

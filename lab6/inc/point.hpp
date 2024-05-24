@@ -1,3 +1,5 @@
+#pragma once
+
 namespace mt
 {
     class Point
@@ -5,14 +7,24 @@ namespace mt
     private:
         float x = 0;
         float y = 0;
+        std::string name;
 
     public:
         Point(float x, float y) : x(x), y(y){};
 
-        float getX() { return x; };
-        float getY() { return y; };
+        Point &s(std::string name)
+        {
+            this->name = name;
 
-        ~Point();
+            return *this;
+        }
+
+        std::string getName() const
+        {
+            return this->name;
+        }
+
+        float getX() const { return x; };
+        float getY() const { return y; };
     };
-
 }
